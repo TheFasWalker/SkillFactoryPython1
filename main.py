@@ -15,3 +15,16 @@
 #
 # Максимальная сумма, которую вы можете заработать — deposit[i]
 # Где вместо deposit[i] будет выведено максимальное значение списка.
+
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+summ = int(input("Введите сумму:"))
+deposit = []
+for value in per_cent:
+    deposit.append(per_cent.get(value) * summ)
+print('Список возможной прибыли:', deposit )
+# Доп задание
+sorted_deposit = deposit.copy()
+sorted_deposit.sort(reverse = True)
+
+
+print('Максимальная сумма, которую вы можете заработать —  ' ,sorted_deposit[0])
